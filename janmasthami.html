@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishn Ji</title>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes swing {
+            20% {
+                transform: rotate(15deg);
+            }
+            40% {
+                transform: rotate(-10deg);
+            }
+            60% {
+                transform: rotate(5deg);
+            }
+            80% {
+                transform: rotate(-5deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background-color: orange;
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header {
+            background-color: #4682b4;
+            color: orange;
+            padding: 10px 0;
+            text-align: center;
+            animation: swing 1.5s ease-in-out;
+        }
+
+        main {
+            padding: 20px;
+            background-color: orange;
+            border-radius: 8px;
+        }
+
+        .intro, .image, .interaction, .audio-controls {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            animation: zoomIn 2s ease-in-out;
+        }
+
+        button {
+            background-color: #af894c;
+            color: rgb(255, 165, 0);
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .audio-controls button {
+            background-color: #af894c;
+            color: rgb(255, 165, 0);
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .audio-controls button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #4682b4;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Subh Janmasthami</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Janmasthami</h2>
+            <p>Janmashtami, also known as Krishn Janmashtami or Gokulashtami, is a major Hindu festival celebrating the birth of Lord Krishn, the eighth avatar of Vishnu. According to Hindu mythology, Krishn was born to Devaki and Vasudeva in Mathura on the eighth day of the Krishn Paksha in the month of Bhadrapada. The festival is observed with deep devotion, involving fasting, singing devotional songs, reading scriptures like the Bhagavad Gita, and performing dances and dramas that depict Krishn's life and divine deeds.</p>
+
+            <p>The spiritual significance of Janmashtami lies in celebrating Krishn as the embodiment of love, wisdom, and divine playfulness. His teachings in the Bhagavad Gita serve as a guiding light for millions of devotees. The festival includes various rituals and celebrations such as fasting until midnight, Dahi Handi events, and the performance of Ras Lila and Krishn Leela. Temples and homes are adorned with decorations, and the climax of the celebrations occurs at midnight, marking the divine birth with bhajans, mantras, and aarti. Janmashtami is a time for spiritual reflection, devotion, and a reaffirmation of the timeless values of love, righteousness, and the bond between the divine and the devotee.</p>
+        </section>
+        <section class="image">
+            <img src="JN 1.png" alt="Krishn Ji">
+        </section>
+        <section class="interaction">
+            <button id="greetButton">Click to Get a Greeting</button>
+            <p id="greetingMessage"></p>
+        </section>
+        <section class="audio-controls">
+            <button id="playButton">Play Music</button>
+            <button id="pauseButton">Pause Music</button>
+            <audio id="backgroundMusic" autoplay loop>
+                <source src="flute2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+    </main>
+    <script>
+        // Greeting Button Functionality
+        document.getElementById('greetButton').addEventListener('click', function() {
+            document.getElementById('greetingMessage').textContent = 'May the blessings of Krishn Ji be with you.';
+        });
+
+        // Play and Pause Button Functionality
+        document.getElementById('playButton').addEventListener('click', function() {
+            var audio = document.getElementById('backgroundMusic');
+            if (audio) {
+                audio.play();
+            }
+        });
+
+        document.getElementById('pauseButton').addEventListener('click', function() {
+            var audio = document.getElementById('backgroundMusic');
+            if (audio) {
+                audio.pause();
+            }
+        });
+    </script>
+</body>
+</html>
